@@ -1,0 +1,90 @@
+package grocerystore;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+public class InventorySystem {
+    private List<Item> items;
+
+    public InventorySystem() {
+        this.items = new ArrayList<>();
+    }
+
+    public void addItem(String name, int quantity, double price) {
+        for (Item item : items) {
+            if (item.getName().equalsIgnoreCase(name)) {
+                item.setQuantity(item.getQuantity() + quantity);
+                System.out.println(quantity + " units added to existing item: " + name);
+                return;
+            }
+        }
+        items.add(new GroceryItem(name, quantity, price));
+        System.out.println("New item added: " + name + " (" + quantity + " units at ₱" + String.format("%.2f", price) + ")");
+    }
+
+    public void removeItem(String name, int quantity) {
+        for (Item item : new ArrayList<>(items)) {
+            if (item.getName().equalsIgnoreCase(name)) {
+                if (item.getQuantity() <= quantity) {
+                    items.remove(item);
+                    System.out.println("Item removed completely: " + name);
+                } else {
+                    item.setQuantity(item.getQuantity() - quantity);
+                    System.out.println(quantity + " units removed from: " + name);
+                }
+                return;
+            }
+        }
+        System.out.println("Item not found in inventory: " + name);
+    }
+
+    public void displayInventory() {
+        if (items.isEmpty()) {
+            System.out.println("Inventory is empty.");
+            return;
+        }
+        System.out.println("Current Inventory:");
+        for (Item item : items) {
+            item.display();
+        }
+    }
+
+    public void saveToFile(String filename) {
+        try (FileWriter writer = new FileWriter(filename)) {
+            for (Item item : items) {
+                writer.write(item.getName() + " " + item.getQuantity() + " " + item.getPrice() + "\n");
+            }
+            System.out.println("Inventory successfully saved to " + filename);
+        } catch (IOException e) {
+            System.err.println("Error saving inventory: " + e.getMessage());
+        }
+    }
+
+    public void loadFromFile(String filename) {
+        File file = new File(filename);
+        if (!file.exists()) {
+            System.err.println("No existing inventory file found, starting fresh.");
+            return;
+        }
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            items.clear();
+            String line;
+            while ((line = reader.readLine()) != null) {
+                String[] parts = line.trim().split("\\s+");
+                if (parts.length == 3) {
+                    String name = parts[0];
+                    int qty = Integer.parseInt(parts[1]);
+                    double price = Double.parseDouble(parts[2]);
+                    items.add(new GroceryItem(name, qty, price));
+                }
+            }
+            System.out.println("Inventory loaded from " + filename);
+        } catch (IOException | NumberFormatException e) {
+            System.err.println("Error loading inventory, starting fresh: " + e.getMessage());
+        }
+    }
+}

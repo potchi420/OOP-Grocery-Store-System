@@ -1,0 +1,4 @@
+balls 7 100.0
+paint 10 100.0
+pen 20 100.0
+pencil 30 300.0
