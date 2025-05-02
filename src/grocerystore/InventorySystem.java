@@ -42,6 +42,17 @@ public class InventorySystem {
         System.out.println("Item not found in inventory: " + name);
     }
 
+    public void editItemPrice(String name, int quantity, double price) {
+        for (Item item : items) {
+            if (item.getName().equalsIgnoreCase(name)) {
+                item.setPrice(price);
+                System.out.println(name + "'s Item price has been modified: " + name);
+                return;
+            }
+        }
+        items.add(new GroceryItem(name, quantity, price));
+        System.out.println("New item added: " + name + " (" + quantity + " units at ₱" + String.format("%.2f", price) + ")");
+    }
     public void displayInventory() {
         if (items.isEmpty()) {
             System.out.println("Inventory is empty.");
