@@ -25,8 +25,9 @@ public class InventoryCommands {
             System.out.println("Select an option:");
             System.out.println("1. Add Items");
             System.out.println("2. Remove Item");
-            System.out.println("3. Display Inventory");
-            System.out.println("4. Save & Exit");
+            System.out.println("3. Edit Item Price");
+            System.out.println("4. Display Inventory");
+            System.out.println("5. Save & Exit");
             System.out.print("Your choice: ");
 
             int choice = scanner.nextInt();
@@ -40,9 +41,12 @@ public class InventoryCommands {
                     removeItemFlow();
                     break;
                 case 3:
-                    inventory.displayInventory();
+                    editItemFlow();
                     break;
                 case 4:
+                    inventory.displayInventory();
+                    break;
+                case 5:
                     saveAndExit();
                     running = false;
                     break;
@@ -84,6 +88,15 @@ public class InventoryCommands {
         int removeQty = scanner.nextInt();
         scanner.nextLine();
         inventory.removeItem(removeName, removeQty);
+    }
+
+    private void editItemFlow() {
+        System.out.print("Enter item name for price to be modified: ");
+        String itemName = scanner.nextLine().trim();
+        System.out.print("Enter quantity to remove: ");
+        double priceChange = scanner.nextInt();
+        scanner.nextLine();
+        inventory.editItemPrice(itemName, priceChange);
     }
 
     private void saveAndExit() {
