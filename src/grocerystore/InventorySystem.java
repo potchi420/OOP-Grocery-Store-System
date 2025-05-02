@@ -45,8 +45,14 @@ public class InventorySystem {
     public void editItemPrice(String name, double price) {
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(name)) {
-                item.setPrice(price);
-                System.out.println(name + "'s Item price has been modified: " + name);
+                if (item.getPrice() == price)
+                {
+                    System.out.println("Entered price is the same as the current price.");
+                }
+                else {
+                    item.setPrice(price);
+                    System.out.println(name + "'s Item price has been modified: " + name);
+                }
                 return;
             }
         }

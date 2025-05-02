@@ -93,8 +93,8 @@ public class InventoryCommands {
     private void editItemFlow() {
         System.out.print("Enter item name for price to be modified: ");
         String itemName = scanner.nextLine().trim();
-        System.out.print("Enter quantity to remove: ");
-        double priceChange = scanner.nextInt();
+        System.out.print("Enter desired updated price: ");
+        double priceChange = scanner.nextDouble();
         scanner.nextLine();
         inventory.editItemPrice(itemName, priceChange);
     }
