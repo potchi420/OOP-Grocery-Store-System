@@ -102,7 +102,7 @@ public class InventoryCommands {
 
         switch (choice) {
             case 1:
-                System.out.print("Enter item name for its price to be modified: ");
+                System.out.print("Enter item name to be modified: ");
                 String itemName_PriceChange = scanner.nextLine().trim();
                 System.out.print("Enter desired updated price: ");
                 double priceChange = scanner.nextDouble();
@@ -110,15 +110,14 @@ public class InventoryCommands {
                 inventory.editItemPrice(itemName_PriceChange, priceChange);
                 break;
             case 2:
-                System.out.print("Enter item name for its name to be modified: ");
+                System.out.print("Enter item name to be modified: ");
                 String itemName_NameChange = scanner.nextLine().trim();
                 System.out.print("Enter desired updated name: ");
                 String nameChange = scanner.nextLine();
-                scanner.nextLine();
                 inventory.editItemName(itemName_NameChange, nameChange);
                 break;
             case 3:
-                System.out.print("Enter item name for its quantity to be modified: ");
+                System.out.print("Enter item name to be modified: ");
                 String itemName_QuantityChange = scanner.nextLine().trim();
                 System.out.print("Enter desired updated quantity: ");
                 int quantityChange = scanner.nextInt();
