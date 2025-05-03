@@ -25,7 +25,7 @@ public class InventoryCommands {
             System.out.println("Select an option:");
             System.out.println("1. Add Items");
             System.out.println("2. Remove Item");
-            System.out.println("3. Edit Item Price");
+            System.out.println("3. Edit Item");
             System.out.println("4. Display Inventory");
             System.out.println("5. Save & Exit");
             System.out.print("Your choice: ");
@@ -91,12 +91,44 @@ public class InventoryCommands {
     }
 
     private void editItemFlow() {
-        System.out.print("Enter item name for price to be modified: ");
-        String itemName = scanner.nextLine().trim();
-        System.out.print("Enter desired updated price: ");
-        double priceChange = scanner.nextDouble();
+        System.out.println("Select an option to modify:");
+        System.out.println("1. Edit Item Price");
+        System.out.println("2. Edit Item Name");
+        System.out.println("3. Edit Item Quantity");
+        System.out.print("Your choice: ");
+
+        int choice = scanner.nextInt();
         scanner.nextLine();
-        inventory.editItemPrice(itemName, priceChange);
+
+        switch (choice) {
+            case 1:
+                System.out.print("Enter item name for its price to be modified: ");
+                String itemName_PriceChange = scanner.nextLine().trim();
+                System.out.print("Enter desired updated price: ");
+                double priceChange = scanner.nextDouble();
+                scanner.nextLine();
+                inventory.editItemPrice(itemName_PriceChange, priceChange);
+                break;
+            case 2:
+                System.out.print("Enter item name for its name to be modified: ");
+                String itemName_NameChange = scanner.nextLine().trim();
+                System.out.print("Enter desired updated name: ");
+                String nameChange = scanner.nextLine();
+                scanner.nextLine();
+                inventory.editItemName(itemName_NameChange, nameChange);
+                break;
+            case 3:
+                System.out.print("Enter item name for its quantity to be modified: ");
+                String itemName_QuantityChange = scanner.nextLine().trim();
+                System.out.print("Enter desired updated quantity: ");
+                int quantityChange = scanner.nextInt();
+                scanner.nextLine();
+                inventory.editItemQuantity(itemName_QuantityChange, quantityChange);
+                break;
+            default:
+                System.out.println("Invalid choice. Please try again.");
+        }
+
     }
 
     private void saveAndExit() {

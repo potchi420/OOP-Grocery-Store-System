@@ -51,7 +51,38 @@ public class InventorySystem {
                 }
                 else {
                     item.setPrice(price);
-                    System.out.println(name + "'s Item price has been modified: " + name);
+                    System.out.println(name + "'s Item price has been modified to: " + price);
+                }
+                return;
+            }
+        }
+    }
+
+    public void editItemName(String name, String updatedName) {
+        for (Item item : items) {
+            if (item.getName().equalsIgnoreCase(name)) {
+                if (item.getName().equalsIgnoreCase(updatedName))
+                {
+                    System.out.println("Entered item name is the same as the current item name.");
+                }
+                else {
+                    item.setName(updatedName);
+                    System.out.println(name + " has been modified to: " + updatedName);
+                }
+                return;
+            }
+        }
+    }
+    public void editItemQuantity(String name, int quantity) {
+        for (Item item : items) {
+            if (item.getName().equalsIgnoreCase(name)) {
+                if (item.getPrice() == quantity)
+                {
+                    System.out.println("Entered quantity is the same as the current item quantity.");
+                }
+                else {
+                    item.setPrice(quantity);
+                    System.out.println(name + "'s Item quantity has been modified: " + quantity);
                 }
                 return;
             }
