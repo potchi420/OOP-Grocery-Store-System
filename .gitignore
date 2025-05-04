@@ -2,7 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-/.idea
+!**/src/test/**/.idea/
 ### Eclipse ###
 .apt_generated
 .classpath

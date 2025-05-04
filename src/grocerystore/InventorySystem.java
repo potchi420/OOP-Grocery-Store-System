@@ -73,6 +73,7 @@ public class InventorySystem {
             }
         }
     }
+
     public void editItemQuantity(String name, int quantity) {
         for (Item item : items) {
             if (item.getName().equalsIgnoreCase(name)) {
