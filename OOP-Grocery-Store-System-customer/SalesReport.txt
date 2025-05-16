@@ -1,0 +1,562 @@
+Daily Report:
+
+2025-05-04 Total Sales: 109.00
+Ella, 91.00
+James, 12.00
+Amelia, 6.00
+
+2025-05-03 Total Sales: 43.00
+Sophia, 10.00
+Liam, 33.00
+
+2025-05-02 Total Sales: 68.00
+Benjamin, 18.00
+Isabella, 32.00
+Mason, 18.00
+
+2025-05-01 Total Sales: 47.00
+Ava, 3.00
+Oliver, 19.00
+Emily, 25.00
+
+2025-04-30 Total Sales: 176.00
+Benjamin, 4.00
+Sophia, 51.00
+Liam, 100.00
+Mason, 21.00
+
+2025-04-29 Total Sales: 196.00
+Isabella, 75.00
+Lucas, 62.00
+Ella, 59.00
+
+2025-04-28 Total Sales: 72.00
+Olivia, 12.00
+Noah, 35.00
+Ethan, 25.00
+
+2025-04-27 Total Sales: 80.00
+James, 26.00
+Amelia, 6.00
+Sophia, 42.00
+Liam, 6.00
+
+2025-04-26 Total Sales: 120.00
+Liam, 89.00
+Ella, 31.00
+
+2025-04-25 Total Sales: 125.00
+Isabella, 9.00
+Mason, 74.00
+Sophia, 42.00
+
+2025-04-24 Total Sales: 114.00
+Emily, 80.00
+Benjamin, 34.00
+
+2025-04-23 Total Sales: 116.00
+Mason, 27.00
+Ava, 50.00
+Oliver, 39.00
+
+2025-04-22 Total Sales: 191.00
+Ella, 62.00
+Benjamin, 18.00
+Sophia, 52.00
+Liam, 59.00
+
+2025-04-21 Total Sales: 150.00
+Isabella, 92.00
+Lucas, 58.00
+
+2025-04-20 Total Sales: 87.00
+Noah, 42.00
+Ethan, 45.00
+
+2025-04-19 Total Sales: 176.00
+Amelia, 5.00
+James, 2.00
+Sophia, 77.00
+Liam, 5.00
+Olivia, 87.00
+
+2025-04-18 Total Sales: 92.00
+Emma, 46.00
+Jack, 33.00
+Mia, 13.00
+
+2025-04-17 Total Sales: 113.00
+Isabella, 4.00
+Mason, 54.00
+Sophia, 45.00
+Liam, 10.00
+
+2025-04-16 Total Sales: 181.00
+Sophia, 4.00
+Liam, 44.00
+Ella, 100.00
+Benjamin, 33.00
+
+2025-04-15 Total Sales: 171.00
+Mason, 81.00
+Ava, 11.00
+Oliver, 79.00
+
+2025-04-14 Total Sales: 22.00
+Ella, 7.00
+James, 12.00
+Emily, 3.00
+
+2025-04-13 Total Sales: 43.00
+Liam, 43.00
+
+2025-04-12 Total Sales: 216.00
+Isabella, 37.00
+Mason, 88.00
+Sophia, 91.00
+
+2025-04-11 Total Sales: 142.00
+Luna, 65.00
+Oliver, 77.00
+
+2025-04-10 Total Sales: 104.00
+Emily, 45.00
+Benjamin, 59.00
+
+2025-04-09 Total Sales: 90.00
+Mia, 8.00
+Aiden, 82.00
+
+2025-04-08 Total Sales: 184.00
+James, 62.00
+Sophia, 66.00
+Liam, 6.00
+Noah, 50.00
+
+2025-04-07 Total Sales: 36.00
+Isabella, 13.00
+Ella, 23.00
+
+2025-04-06 Total Sales: 191.00
+William, 64.00
+Sophia, 41.00
+Ethan, 67.00
+Mason, 19.00
+
+2025-04-05 Total Sales: 72.00
+Jack, 49.00
+Mia, 23.00
+
+2025-04-04 Total Sales: 196.00
+Ella, 39.00
+Michael, 24.00
+Amelia, 87.00
+Lucas, 46.00
+
+2025-04-03 Total Sales: 271.00
+Benjamin, 39.00
+Sophia, 80.00
+Elijah, 79.00
+Isabella, 64.00
+Liam, 9.00
+
+2025-04-02 Total Sales: 38.00
+Emily, 38.00
+
+2025-04-01 Total Sales: 190.00
+Mason, 84.00
+Ava, 37.00
+Oliver, 69.00
+
+2025-03-29 Total Sales: 42.00
+Sophia, 42.00
+
+2025-03-28 Total Sales: 15.00
+Liam, 15.00
+
+2025-03-27 Total Sales: 129.00
+Amelia, 41.00
+Lucas, 88.00
+
+2025-03-26 Total Sales: 23.00
+James, 23.00
+
+2025-03-25 Total Sales: 46.00
+Ella, 46.00
+
+2025-03-24 Total Sales: 45.00
+Mason, 45.00
+
+2025-03-22 Total Sales: 87.00
+Mia, 13.00
+Evelyn, 23.00
+Noah, 51.00
+
+2025-03-21 Total Sales: 128.00
+Isabella, 90.00
+William, 38.00
+
+2025-03-20 Total Sales: 124.00
+Emily, 44.00
+Ethan, 80.00
+
+2025-03-19 Total Sales: 139.00
+David, 69.00
+Aiden, 61.00
+Sophia, 9.00
+
+2025-03-18 Total Sales: 173.00
+Alexander, 6.00
+Sofia, 17.00
+Jacob, 31.00
+Mia, 69.00
+Jack, 50.00
+
+2025-03-17 Total Sales: 127.00
+Grace, 37.00
+Michael, 73.00
+Isabella, 17.00
+
+2025-03-15 Total Sales: 173.00
+Emily, 40.00
+Ethan, 75.00
+Amelia, 58.00
+
+2025-03-14 Total Sales: 117.00
+Lucas, 37.00
+Mason, 71.00
+Harper, 9.00
+
+2025-03-13 Total Sales: 198.00
+Sophia, 91.00
+Oliver, 59.00
+Ella, 48.00
+
+2025-03-11 Total Sales: 95.00
+Zachary, 34.00
+Amelia, 30.00
+Elijah, 31.00
+
+2025-03-10 Total Sales: 111.00
+Luna, 31.00
+Aiden, 32.00
+Evelyn, 48.00
+
+2025-03-09 Total Sales: 70.00
+Jack, 70.00
+
+2025-03-08 Total Sales: 191.00
+Mia, 82.00
+Logan, 60.00
+Aria, 49.00
+
+2025-03-07 Total Sales: 41.00
+Benjamin, 41.00
+
+2025-03-05 Total Sales: 132.00
+Lucas, 37.00
+Ella, 95.00
+
+2025-03-04 Total Sales: 33.00
+Isabella, 33.00
+
+2025-02-10 Total Sales: 35.00
+Ethan, 35.00
+
+2025-02-09 Total Sales: 60.00
+Noah, 43.00
+Sophia, 17.00
+
+2025-02-08 Total Sales: 61.00
+Emma, 25.00
+Liam, 2.00
+Olivia, 34.00
+
+2025-02-07 Total Sales: 23.00
+Jacob, 23.00
+
+2025-02-03 Total Sales: 165.00
+Mason, 97.00
+Mia, 68.00
+
+2025-02-02 Total Sales: 78.00
+Isabella, 78.00
+
+2025-01-09 Total Sales: 143.00
+Ella, 78.00
+Benjamin, 65.00
+
+2025-01-08 Total Sales: 73.00
+Logan, 73.00
+
+2025-01-07 Total Sales: 58.00
+Sophia, 58.00
+
+2025-01-06 Total Sales: 64.00
+Amelia, 6.00
+James, 58.00
+
+2025-01-04 Total Sales: 207.00
+Jack, 86.00
+Mia, 91.00
+Alexander, 30.00
+
+2025-01-03 Total Sales: 87.00
+Ava, 87.00
+
+2024-12-09 Total Sales: 27.00
+Oliver, 27.00
+
+2024-12-06 Total Sales: 211.00
+Benjamin, 69.00
+Isabella, 48.00
+Mason, 17.00
+Ella, 77.00
+
+2024-12-05 Total Sales: 93.00
+Emma, 93.00
+
+2024-12-04 Total Sales: 57.00
+Lucas, 57.00
+
+2024-12-03 Total Sales: 173.00
+Ethan, 92.00
+Olivia, 81.00
+
+2024-12-01 Total Sales: 90.00
+Sofia, 90.00
+
+2024-11-08 Total Sales: 27.00
+Liam, 27.00
+
+2024-11-07 Total Sales: 37.00
+Jacob, 37.00
+
+2024-11-06 Total Sales: 108.00
+Aurora, 13.00
+Penelope, 95.00
+
+2024-11-05 Total Sales: 41.00
+Mason, 41.00
+
+2024-11-04 Total Sales: 82.00
+Luna, 82.00
+
+2024-11-03 Total Sales: 38.00
+Victoria, 38.00
+
+2024-11-02 Total Sales: 63.00
+Stella, 63.00
+
+2024-11-01 Total Sales: 66.00
+Ella, 53.00
+Leo, 13.00
+
+2024-10-10 Total Sales: 97.00
+Levi, 97.00
+
+2024-10-08 Total Sales: 190.00
+Mila, 95.00
+Nolan, 95.00
+
+2024-10-04 Total Sales: 31.00
+Grayson, 15.00
+Hazel, 16.00
+
+2024-10-03 Total Sales: 147.00
+Sebastian, 78.00
+Savannah, 69.00
+
+2024-10-02 Total Sales: 32.00
+Ellie, 32.00
+
+2024-10-01 Total Sales: 28.00
+Cameron, 14.00
+Skylar, 14.00
+
+2024-09-10 Total Sales: 75.00
+Riley, 75.00
+
+2024-09-09 Total Sales: 17.00
+Aurora, 17.00
+
+2024-09-06 Total Sales: 21.00
+Julian, 21.00
+
+2024-09-05 Total Sales: 16.00
+Isaiah, 16.00
+
+2024-09-04 Total Sales: 109.00
+Hazel, 55.00
+Gabriella, 54.00
+
+2024-09-02 Total Sales: 143.00
+Elena, 74.00
+Santiago, 69.00
+
+2024-09-01 Total Sales: 44.00
+Ella, 8.00
+Maddox, 36.00
+
+2024-08-10 Total Sales: 86.00
+John, 86.00
+
+2024-08-09 Total Sales: 79.00
+Gianna, 32.00
+David, 47.00
+
+2024-08-08 Total Sales: 56.00
+Camila, 56.00
+
+2024-08-07 Total Sales: 88.00
+Nolan, 88.00
+
+2024-08-05 Total Sales: 11.00
+Aaron, 11.00
+
+2024-08-03 Total Sales: 159.00
+Victoria, 68.00
+Leah, 91.00
+
+2024-08-02 Total Sales: 43.00
+Penelope, 43.00
+
+2024-08-01 Total Sales: 41.00
+Jackson, 41.00
+
+2024-07-10 Total Sales: 16.00
+Lillian, 16.00
+
+2024-07-07 Total Sales: 27.00
+Adam, 27.00
+
+2024-07-04 Total Sales: 15.00
+Eleanor, 8.00
+Maya, 7.00
+
+2024-07-03 Total Sales: 11.00
+Claire, 11.00
+
+2024-07-02 Total Sales: 91.00
+Ryan, 62.00
+Zachary, 29.00
+
+2024-07-01 Total Sales: 191.00
+David, 65.00
+Hannah, 45.00
+Josephine, 81.00
+
+2024-06-10 Total Sales: 100.00
+Lily, 100.00
+
+2024-06-07 Total Sales: 76.00
+Isaac, 76.00
+
+2024-06-06 Total Sales: 118.00
+Aria, 50.00
+Caleb, 59.00
+Nora, 9.00
+
+2024-06-05 Total Sales: 90.00
+Gabriel, 90.00
+
+2024-06-04 Total Sales: 86.00
+Scarlett, 86.00
+
+2024-06-03 Total Sales: 173.00
+Evelyn, 83.00
+Owen, 90.00
+
+2024-06-02 Total Sales: 48.00
+Sebastian, 48.00
+
+2024-05-09 Total Sales: 54.00
+Amelia, 54.00
+
+2024-05-08 Total Sales: 104.00
+Henry, 56.00
+Ella, 39.00
+Jack, 9.00
+
+2024-05-07 Total Sales: 33.00
+Luna, 33.00
+
+2024-05-05 Total Sales: 97.00
+Madison, 12.00
+Samuel, 85.00
+
+2024-05-03 Total Sales: 40.00
+Joseph, 40.00
+
+2024-05-02 Total Sales: 118.00
+Matthew, 35.00
+Zoe, 83.00
+
+2024-04-09 Total Sales: 82.00
+Victoria, 82.00
+
+2024-04-08 Total Sales: 44.00
+Daniel, 44.00
+
+2024-04-07 Total Sales: 87.00
+Chloe, 87.00
+
+2024-04-06 Total Sales: 40.00
+Alexander, 40.00
+
+2024-04-05 Total Sales: 75.00
+Grace, 75.00
+
+2024-04-04 Total Sales: 156.00
+Sofia, 89.00
+Elijah, 67.00
+
+2024-04-01 Total Sales: 152.00
+Jacob, 23.00
+Avery, 61.00
+Michael, 68.00
+
+2024-03-10 Total Sales: 40.00
+Logan, 33.00
+Charlotte, 7.00
+
+2024-03-08 Total Sales: 49.00
+Aria, 49.00
+
+2024-03-07 Total Sales: 20.00
+Mason, 20.00
+
+2024-03-04 Total Sales: 93.00
+Benjamin, 74.00
+Ella, 19.00
+
+2024-03-03 Total Sales: 55.00
+Harper, 55.00
+
+2024-03-02 Total Sales: 136.00
+Ethan, 64.00
+Amelia, 65.00
+James, 7.00
+
+2024-02-09 Total Sales: 127.00
+Isabella, 19.00
+Lucas, 8.00
+Mia, 100.00
+
+2024-02-08 Total Sales: 43.00
+Aiden, 43.00
+
+2024-02-07 Total Sales: 7.00
+Olivia, 7.00
+
+2024-02-03 Total Sales: 182.00
+Emma, 88.00
+Noah, 94.00
+
+2024-02-02 Total Sales: 37.00
+Liam, 37.00
+
+2024-02-01 Total Sales: 55.00
+Raphael, 46.00
+Sophia, 9.00
+
