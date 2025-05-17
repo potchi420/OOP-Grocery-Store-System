@@ -10,7 +10,6 @@ public class ReportCommands {
     public void start() {
         System.out.println("Welcome to the Grocery Report System!");
         runMenuLoop();
-        scanner.close();
     }
 
     private void runMenuLoop() {

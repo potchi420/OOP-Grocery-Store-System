@@ -16,7 +16,6 @@ public class InventoryCommands {
 
     public void start() {
         runMenuLoop();
-        scanner.close();
     }
 
     private void runMenuLoop() {
@@ -132,6 +131,6 @@ public class InventoryCommands {
 
     private void saveAndExit() {
         inventory.saveToFile(DEFAULT_FILE);
-        System.out.println("Exiting system. Goodbye!");
+        System.out.println("Exiting. . .");
     }
 }

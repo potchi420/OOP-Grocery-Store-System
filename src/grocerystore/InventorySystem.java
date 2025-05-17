@@ -5,6 +5,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class InventorySystem {
@@ -95,10 +97,15 @@ public class InventorySystem {
             System.out.println("Inventory is empty.");
             return;
         }
-        System.out.println("Current Inventory:");
-        for (Item item : items) {
-            item.display();
+        InventoryLoader inventoryLoader = new InventoryLoader();
+        String[][] inventory = inventoryLoader.getItems();
+        Arrays.sort(inventory, Comparator.comparingInt(a -> Integer.parseInt(a[1])));
+        System.out.println("-------------------------------");
+        System.out.printf("%-15s %-10s %-10s\n", "Item", "Quantity", "Price");
+        for (String[] item : inventory) {
+            System.out.printf("%-15s %-10s %-10s\n", item[0], item[1], item[2]);
         }
+        System.out.println("-------------------------------");
     }
 
     public void saveToFile(String filename) {

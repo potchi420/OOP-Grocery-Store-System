@@ -10,7 +10,6 @@ public class ReceiptCommands {
     public void start() {
         System.out.println("Welcome to the Grocery Store Dear Customer!");
         runMenuLoop();
-        scanner.close();
     }
 
     // Method to display the menu and handle user input
