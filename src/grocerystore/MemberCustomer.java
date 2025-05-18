@@ -6,6 +6,6 @@ public class MemberCustomer extends Customer {
 
     @Override
     public void display() {
-        System.out.printf("%s: %d units @ $%.2f each\n", getName(), getStatus());
+        System.out.printf(getName() + " : with the status of " + getStatus() +"\n");
     }
 }

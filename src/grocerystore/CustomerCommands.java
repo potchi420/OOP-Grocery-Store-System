@@ -22,7 +22,11 @@ public class CustomerCommands {
         while (running) {
             System.out.println("Select an option:");
             System.out.println("1. Register Customer");
-            System.out.println("2. Save & Exit");
+            System.out.println("2. Remove Customers");
+            System.out.println("3. Display Customer");
+            System.out.println("4. Edit Customer Name");
+            System.out.println("5. Edit Customer Status");
+            System.out.println("6. Save & Exit");
             System.out.print("Your choice: ");
 
             int choice = scanner.nextInt();
@@ -33,6 +37,18 @@ public class CustomerCommands {
                     registerCustomerFlow();
                     break;
                 case 2:
+                    removeCustomerFlow();
+                    break;
+                case 3:
+                    customer.displayCustomerFlow();
+                    break;
+                case 4:
+                    editCustomerNameFlow();
+                    break;
+                case 5:
+                    editCustomerStatusFlow();
+                    break;
+                case 6:
                     saveAndExit();
                     running = false;
                     break;
@@ -43,10 +59,10 @@ public class CustomerCommands {
     }
 
     private void registerCustomerFlow() {
-        System.out.print("How many customer/s to to register? ");
+        System.out.print("How many customer/s to register? ");
         int count = scanner.nextInt();
         scanner.nextLine();
-        System.out.println("Enter customer variables as: name status seperated by spaces");
+        System.out.println("Enter customer variables as: name, status seperated by a comma");
         for (int i = 0; i < count; i++) {
             System.out.printf("Customer %d: ", i + 1);
             String line = scanner.nextLine().trim();
@@ -64,6 +80,34 @@ public class CustomerCommands {
                 i--;
             }
         }
+        customer.saveToFile(DEFAULT_FILE);
+    }
+
+    private void removeCustomerFlow() {
+        System.out.print("Enter customer name to remove: ");
+        String removeName = scanner.nextLine().trim();
+        System.out.print("Enter customer's status: ");
+        String  status = scanner.nextLine().trim();
+        customer.removeCustomer(removeName, status);
+        customer.saveToFile(DEFAULT_FILE);
+    }
+
+    private void editCustomerNameFlow() {
+        System.out.print("Enter customer name to edit: ");
+        String editName = scanner.nextLine().trim();
+        System.out.print("Enter customer's new name: ");
+        String  newName = scanner.nextLine().trim();
+        customer.editCustomerName(editName, newName);
+        customer.saveToFile(DEFAULT_FILE);
+    }
+
+    private void editCustomerStatusFlow() {
+        System.out.print("Enter customer name to edit: ");
+        String editName = scanner.nextLine().trim();
+        System.out.print("Enter customer's new status: ");
+        String  newStatus = scanner.nextLine().trim();
+        customer.editCustomerStatus(editName, newStatus);
+        customer.saveToFile(DEFAULT_FILE);
     }
 
 

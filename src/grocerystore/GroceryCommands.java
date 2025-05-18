@@ -2,8 +2,7 @@ package grocerystore;
 
 import java.util.Scanner;
 
-public class GroceryCommands
-{
+public class GroceryCommands {
     public static void start() {
         Scanner scanner = new Scanner(System.in);
         boolean start = true;
@@ -13,16 +12,15 @@ public class GroceryCommands
                             ========================================
                                      Grocery Store System
                             ========================================
-                              1. Admin Commands
+                              1. Inventory Commands
                               2. Report Commands
-                              3. Customer Commands
+                              3. Shop Commands
                               4. Register/Find Customer Commands
                               5. Exit
                             ----------------------------------------
-                              Enter your choice:""");
+                              Enter your choice: """);
             int choice = scanner.nextInt();
-            scanner.nextLine();
-
+            scanner.nextLine(); // Consume the newline character
             switch (choice) {
                 case 1:
                     new InventoryCommands().start();
@@ -34,7 +32,8 @@ public class GroceryCommands
                     new ReceiptCommands().start();
                     break;
                 case 4:
-
+                    new CustomerCommands().start();
+                    break;
                 case 5:
                     System.out.println("Exiting...");
                     scanner.close();

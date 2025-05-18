@@ -5,8 +5,6 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
 
 public class CustomerSystem {
@@ -28,7 +26,18 @@ public class CustomerSystem {
         System.out.println("New customer registered: " + name + " with the status of " + status);
     }
 
-    public void displayCustomers() {
+    public void removeCustomer(String name, String status) {
+        for (Customer customer : new ArrayList<>(customers)) {
+            if (customer.getName().equalsIgnoreCase(name)){
+                customers.remove(customer);
+                System.out.println("Customer with name '" + name + "' removed.");
+                return;
+            }
+        }
+        System.out.println("Item not found in customer: " + name);
+    }
+
+    public void displayCustomerFlow() {
         if (customers.isEmpty()) {
             System.out.println("customers don't exist.");
             return;
@@ -36,17 +45,48 @@ public class CustomerSystem {
         CustomerLoader customerLoader = new CustomerLoader();
         String[][] customer = customerLoader.getCustomer();
         System.out.println("-------------------------------");
-        System.out.printf("%-15s %-10s \n", "Item", "Status");
+        System.out.printf("%-15s %-10s \n", "Customer", "Status");
         for (String[] customers : customer) {
-            System.out.printf("%-15s %-10s %-10s\n", customers[0], customers[1]);
+            System.out.printf("%-15s %-10s\n", customers[0], customers[1]);
         }
         System.out.println("-------------------------------");
     }
 
+    public void editCustomerStatus(String name, String status) {
+        for (Customer customer : customers) {
+            if (customer.getName().equalsIgnoreCase(name)) {
+                if (customer.getStatus().equalsIgnoreCase(status))
+                {
+                    System.out.println("Entered price is the same as the current price.");
+                }
+                else {
+                    customer.setStatus(status);
+                    System.out.println(name + "'s status has been modified to: " + status);
+                }
+                return;
+            }
+        }
+    }
+
+    public void editCustomerName(String name, String newName) {
+        for (Customer customer : customers) {
+           if (customer.getName().equalsIgnoreCase(name)) {
+               if (customer.getName().equals(newName)) {
+                   System.out.println("Entered name is the same as the current name.");
+               }
+               else {
+                   customer.setName(newName);
+                   System.out.println(name + "'s name has been modified to: " + newName);
+               }
+           }
+        }
+    }
+
+
     public void saveToFile(String filename) {
         try (FileWriter writer = new FileWriter(filename)) {
             for (Customer customer : customers) {
-                writer.write(customer.getName() + " " + customer.getStatus() + "\n");
+                writer.write(customer.getName() + "," + customer.getStatus() + "\n");
             }
             System.out.println("Customers successfully saved to " + filename);
         } catch (IOException e) {
