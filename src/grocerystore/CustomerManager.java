@@ -1,5 +1,5 @@
 package grocerystore;
-
+/*
 import java.util.*;
 
 public class CustomerManager
@@ -50,3 +50,4 @@ public class CustomerManager
         return customers;
     }
 }
+*/

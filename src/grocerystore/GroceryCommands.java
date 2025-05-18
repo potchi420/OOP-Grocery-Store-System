@@ -16,7 +16,8 @@ public class GroceryCommands
                               1. Admin Commands
                               2. Report Commands
                               3. Customer Commands
-                              4. Exit
+                              4. Register/Find Customer Commands
+                              5. Exit
                             ----------------------------------------
                               Enter your choice:""");
             int choice = scanner.nextInt();
@@ -33,6 +34,8 @@ public class GroceryCommands
                     new ReceiptCommands().start();
                     break;
                 case 4:
+
+                case 5:
                     System.out.println("Exiting...");
                     scanner.close();
                     start = false;
