@@ -16,7 +16,7 @@ public abstract class Customer {
         this.name = name;
     }
 
-    public String getStatus(String status) {
+    public String getStatus() {
         return status;
     }
 

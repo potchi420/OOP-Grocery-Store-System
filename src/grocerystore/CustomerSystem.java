@@ -19,103 +19,38 @@ public class CustomerSystem {
     public void registerCustomer(String name, String status) {
         for (Customer customer : customers) {
             if (customer.getName().equalsIgnoreCase(name)) {
-                customer.setName(item.getQuantity() + quantity);
-                System.out.println(quantity + " units added to existing item: " + name);
+                System.out.println("Customer with name '" + name + "' already exists.");
                 return;
             }
         }
-        items.add(new GroceryItem(name, quantity, price));
-        System.out.println("New item added: " + name + " (" + quantity + " units at ₱" + String.format("%.2f", price) + ")");
+        // If the loop finishes without finding a customer with the same name, create a new one
+        customers.add(new MemberCustomer(name, status));
+        System.out.println("New customer registered: " + name + " with the status of " + status);
     }
 
-    public void removeItem(String name, int quantity) {
-        for (Item item : new ArrayList<>(items)) {
-            if (item.getName().equalsIgnoreCase(name)) {
-                if (item.getQuantity() <= quantity) {
-                    items.remove(item);
-                    System.out.println("Item removed completely: " + name);
-                } else {
-                    item.setQuantity(item.getQuantity() - quantity);
-                    System.out.println(quantity + " units removed from: " + name);
-                }
-                return;
-            }
-        }
-        System.out.println("Item not found in inventory: " + name);
-    }
-
-    public void editItemPrice(String name, double price) {
-        for (Item item : items) {
-            if (item.getName().equalsIgnoreCase(name)) {
-                if (item.getPrice() == price)
-                {
-                    System.out.println("Entered price is the same as the current price.");
-                }
-                else {
-                    item.setPrice(price);
-                    System.out.println(name + "'s Item price has been modified to: " + price);
-                }
-                return;
-            }
-        }
-    }
-
-    public void editItemName(String name, String updatedName) {
-        for (Item item : items) {
-            if (item.getName().equalsIgnoreCase(name)) {
-                if (item.getName().equalsIgnoreCase(updatedName))
-                {
-                    System.out.println("Entered item name is the same as the current item name.");
-                }
-                else {
-                    item.setName(updatedName);
-                    System.out.println(name + " has been modified to: " + updatedName);
-                }
-                return;
-            }
-        }
-    }
-
-    public void editItemQuantity(String name, int quantity) {
-        for (Item item : items) {
-            if (item.getName().equalsIgnoreCase(name)) {
-                if (item.getPrice() == quantity)
-                {
-                    System.out.println("Entered quantity is the same as the current item quantity.");
-                }
-                else {
-                    item.setPrice(quantity);
-                    System.out.println(name + "'s Item quantity has been modified: " + quantity);
-                }
-                return;
-            }
-        }
-    }
-    public void displayInventory() {
-
-        if (items.isEmpty()) {
-            System.out.println("Inventory is empty.");
+    public void displayCustomers() {
+        if (customers.isEmpty()) {
+            System.out.println("customers don't exist.");
             return;
         }
-        InventoryLoader inventoryLoader = new InventoryLoader();
-        String[][] inventory = inventoryLoader.getItems();
-        Arrays.sort(inventory, Comparator.comparingInt(a -> Integer.parseInt(a[1])));
+        CustomerLoader customerLoader = new CustomerLoader();
+        String[][] customer = customerLoader.getCustomer();
         System.out.println("-------------------------------");
-        System.out.printf("%-15s %-10s %-10s\n", "Item", "Quantity", "Price");
-        for (String[] item : inventory) {
-            System.out.printf("%-15s %-10s %-10s\n", item[0], item[1], item[2]);
+        System.out.printf("%-15s %-10s \n", "Item", "Status");
+        for (String[] customers : customer) {
+            System.out.printf("%-15s %-10s %-10s\n", customers[0], customers[1]);
         }
         System.out.println("-------------------------------");
     }
 
     public void saveToFile(String filename) {
         try (FileWriter writer = new FileWriter(filename)) {
-            for (Item item : items) {
-                writer.write(item.getName() + " " + item.getQuantity() + " " + item.getPrice() + "\n");
+            for (Customer customer : customers) {
+                writer.write(customer.getName() + " " + customer.getStatus() + "\n");
             }
-            System.out.println("Inventory successfully saved to " + filename);
+            System.out.println("Customers successfully saved to " + filename);
         } catch (IOException e) {
-            System.err.println("Error saving inventory: " + e.getMessage());
+            System.err.println("Error saving customers: " + e.getMessage());
         }
     }
 
@@ -126,24 +61,23 @@ public class CustomerSystem {
             return;
         }
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            items.clear();
+            customers.clear();
             String line;
             while ((line = reader.readLine()) != null) {
-                String[] parts = line.trim().split("\\s+");
-                if (parts.length == 3) {
+                String[] parts = line.trim().split(",");
+                if (parts.length == 2) {
                     String name = parts[0];
-                    int qty = Integer.parseInt(parts[1]);
-                    double price = Double.parseDouble(parts[2]);
-                    items.add(new GroceryItem(name, qty, price));
+                    String status = parts[1];
+                    customers.add(new MemberCustomer(name, status));
                 }
             }
-            System.out.println("Inventory loaded from " + filename);
+            System.out.println("Customers loaded from " + filename);
         } catch (IOException | NumberFormatException e) {
-            System.err.println("Error loading inventory, starting fresh: " + e.getMessage());
+            System.err.println("Error loading customers, starting fresh: " + e.getMessage());
         }
     }
 
-    public List<Item> getItem() {
-        return items;
+    public List<Customer> getCustomers() {
+        return customers;
     }
 }

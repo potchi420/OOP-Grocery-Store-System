@@ -140,6 +140,7 @@ class InventoryLoader extends FileLoaderSystem {
     }    
 }
 
+
 // Transaction Loader
 class TransactionLoader extends FileLoaderSystem {
     private String[][] transactions;
