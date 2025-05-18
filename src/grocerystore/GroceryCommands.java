@@ -15,7 +15,7 @@ public class GroceryCommands {
                               1. Inventory Commands
                               2. Report Commands
                               3. Shop Commands
-                              4. Register/Find Customer Commands
+                              4. Customer Commands
                               5. Exit
                             ----------------------------------------
                               Enter your choice: """);

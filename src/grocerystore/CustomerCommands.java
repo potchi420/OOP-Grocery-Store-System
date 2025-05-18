@@ -23,9 +23,9 @@ public class CustomerCommands {
             System.out.println("Select an option:");
             System.out.println("1. Register Customer");
             System.out.println("2. Remove Customers");
-            System.out.println("3. Display Customer");
-            System.out.println("4. Edit Customer Name");
-            System.out.println("5. Edit Customer Status");
+            System.out.println("3. Edit Customer Name");
+            System.out.println("4. Edit Customer Status");
+            System.out.println("5. Display Customer");
             System.out.println("6. Save & Exit");
             System.out.print("Your choice: ");
 
@@ -40,13 +40,13 @@ public class CustomerCommands {
                     removeCustomerFlow();
                     break;
                 case 3:
-                    customer.displayCustomerFlow();
-                    break;
-                case 4:
                     editCustomerNameFlow();
                     break;
-                case 5:
+                case 4:
                     editCustomerStatusFlow();
+                    break;
+                case 5:
+                    customer.displayCustomerFlow();
                     break;
                 case 6:
                     saveAndExit();
@@ -113,6 +113,6 @@ public class CustomerCommands {
 
     private void saveAndExit() {
         customer.saveToFile(DEFAULT_FILE);
-        System.out.println("Exiting. . .");
+        System.out.println("Exiting...");
     }
 }

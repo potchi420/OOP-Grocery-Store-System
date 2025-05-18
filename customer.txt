@@ -2,4 +2,3 @@ Chris, bronze
 Raphael, gold
 PWD, pwd
 Lance, silver
-steve,gold
