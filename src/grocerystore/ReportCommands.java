@@ -15,12 +15,17 @@ public class ReportCommands {
     private void runMenuLoop() {
         boolean running = true;
         while (running) {
-            System.out.println("Select an option:");
-            System.out.println("1. Check Inventory");
-            System.out.println("2. Sales Report");  
-            System.out.println("3. Sold Items Report");
-            System.out.println("4. Exit");
-            System.out.print("Your choice: ");
+            System.out.print(
+                    """
+                            ========================================
+                                     Report System
+                            ========================================
+                              1. Check Inventory
+                              2. Sales Report
+                              3. Sold Items Report
+                              4. Exit
+                            ----------------------------------------
+                              Enter your choice: """);
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -29,35 +34,45 @@ public class ReportCommands {
                 case 1:
                     System.out.println("Inventory Report: ");
                     reportSystem.displayInventory();
+                    System.out.println("        ");
                     break;
                 case 2:
                     System.out.println("Sales Report: ");
                     displaySalesReport();
+                    System.out.println("        ");
                     break;
                 case 3: 
                     System.out.println("Sold Items Report: ");
                     displayItemSoldReport();
+                    System.out.println("        ");
                     break;
                 case 4:
                     System.out.println("Exiting...");
                     running = false;
+                    System.out.println("        ");
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
+                    System.out.println("        ");
             }
         }
     }
 
     // Method to display the sales report
     public void displaySalesReport() {
-        System.out.println("What would you like to check?");
-        System.out.println("1. Total Daily Sales");
-        System.out.println("2. Total Weekly Sales");
-        System.out.println("3. Total Monthly Sales");
-        System.out.println("4. Total Yearly Sales");
-        System.out.println("5. Total Sales");
-        System.out.println("6. Exit");
-        System.out.print("Your choice: ");
+        System.out.print(
+                    """
+                            ========================================
+                                     Sales Report 
+                            ========================================
+                              1. Total Daily Sales
+                              2. Total Weekly Sales
+                              3. Total Monthly Sales
+                              4. Total Yearly Sales
+                              5. Total Sales
+                              6. Exir
+                            ----------------------------------------
+                              Enter your choice: """);
 
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -66,24 +81,31 @@ public class ReportCommands {
             case 1:
                 System.out.println("Daily Sales: ");
                 reportSystem.getDailySales();
+                System.out.println("        ");
                 break;
             case 2:
                 System.out.println("Weekly Sales: ");
                 reportSystem.getWeeklySales();
+                System.out.println("        ");
                 break;
             case 3:
                 System.out.println("Monthly Sales: ");
                 reportSystem.getMonthlySales();
+                System.out.println("        ");
                 break;
             case 4:
                 System.out.println("Yearly Sales: ");
                 reportSystem.getYearlySales();
+                System.out.println("        ");
                 break;
             case 5:
                 System.out.println("Overall Sales: ");
                 reportSystem.getOverallSales();
+                System.out.println("        ");
+                break;
             case 6:
                 System.out.println("Exiting...");
+                System.out.println("        ");
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
@@ -92,14 +114,19 @@ public class ReportCommands {
 
     // Method to display the item sold report
     public void displayItemSoldReport() {
-        System.out.println("What would you like to check?");
-        System.out.println("1. Item sold Daily");
-        System.out.println("2. Item sold Weekly");
-        System.out.println("3. Item sold Monthly");
-        System.out.println("4. Item sold Yearly");
-        System.out.println("5. Total sold Items");
-        System.out.println("6. Exit");
-        System.out.print("Your choice: ");
+        System.out.print(
+            """
+                    ========================================
+                             Items Sold Report 
+                    ========================================
+                      1. Items Sold Daily 
+                      2. Items Sold Weekly
+                      3. Items Sold Monthly
+                      4. Items Sold Yearly 
+                      5. Total Sold Items
+                      6. Exir
+                    ----------------------------------------
+                      Enter your choice: """);
 
         int choice = scanner.nextInt();
         scanner.nextLine();
@@ -108,27 +135,34 @@ public class ReportCommands {
             case 1:
                 System.out.println("Daily sold items: ");
                 reportSystem.getDailyItemSold();
+                System.out.println("        ");
                 break;
             case 2:
                 System.out.println("Weekly sold items: ");
                 reportSystem.getWeeklyItemSold();
+                System.out.println("        ");
                 break;
             case 3:
                 System.out.println("Monthly sold items: ");
                 reportSystem.getMonthlyItemSold();
+                System.out.println("        ");
                 break;
             case 4:
                 System.out.println("Yearly sold items: ");
                 reportSystem.getYearlyItemSold();
+                System.out.println("        ");
                 break;
             case 5:
                 System.out.println("Overall sold items: ");
                 reportSystem.getOverallItemSold();
+                System.out.println("        ");
             case 6:
                 System.out.println("Exiting...");
+                System.out.println("        ");
                 break;
             default:
                 System.out.println("Invalid choice. Please try again.");
+                System.out.println("        ");
         }
     }
 

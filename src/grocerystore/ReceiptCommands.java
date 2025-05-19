@@ -17,14 +17,19 @@ public class ReceiptCommands {
         boolean running = true;
         while (running) {
             try {
-                System.out.println("Select an option:");
-                System.out.println("1. Browse Available Items");
-                System.out.println("2. Add Item to Cart");  
-                System.out.println("3. View Cart");
-                System.out.println("4. Edit Cart");
-                System.out.println("5. Checkout");
-                System.out.println("6. Exit");
-                System.out.print("Your choice: ");
+                System.out.print(
+                    """
+                            ========================================
+                                     Shopping System
+                            ========================================
+                              1. Browse Available Items
+                              2. Add Item to Cart
+                              3. View Cart
+                              4. Edit Cart
+                              5. Checkout
+                              6. Exit
+                            ----------------------------------------
+                              Enter your choice: """);
 
                 int choice;
                 try {
@@ -40,19 +45,23 @@ public class ReceiptCommands {
                     case 1:
                         System.out.println("Available Items: ");
                         receipt.displayInventory();
+                        System.out.println("           ");
                         break;
                     case 2:
                         System.out.println("Enter the item name to add to cart:");
                         String itemName = scanner.nextLine().toLowerCase().trim();
                         receipt.addItemToCart(itemName, scanner);
+                        System.out.println("           ");
                         break;
                     case 3:
                         receipt.viewCart();
+                        System.out.println("           ");
                         break;  
                     case 4:
                         System.out.println("Enter the item name to edit in cart:");
                         String editItemName = scanner.nextLine().toLowerCase().trim();
                         editCartItem(editItemName, scanner);
+                        System.out.println("           ");
                         break;
                     case 5:
                         System.out.println("Do you want to checkout or continue to browsing?");
@@ -82,13 +91,16 @@ public class ReceiptCommands {
                             System.out.println("Customer Name: " + customerName);
                         }
                         receipt.checkout(customerName);
+                        System.out.println("           ");
                         break;
                     case 6:
                         System.out.println("Thank you for shopping with us! Goodbye!");
                         running = false;
+                        System.out.println("           ");
                         break;
                     default:
                         System.out.println("Invalid choice. Please try again.");
+                        System.out.println("           ");
                 }
             } catch (Exception e) {
                 System.out.println("An error occurred: " + e.getMessage());

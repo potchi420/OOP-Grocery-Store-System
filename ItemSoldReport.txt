@@ -1,48 +1,6 @@
-Yearly Item Sold Report:
+Overall Item Sold Report:
 
-2025 Total Items Sold: 2136
-balls, 87
-paint, 86
-pencil, 91
-pencil, 30
-pencil, 6
-pencil, 58
-pen, 58
-pencil, 73
-pen, 78
-pen, 65
-pen, 78
-paint, 97
-balls, 68
-paint, 23
-paint, 25
-pen, 2
-paint, 34
-paint, 43
-balls, 17
-pen, 35
-pen, 33
-pencil, 37
-pencil, 95
-balls, 41
-paint, 82
-pen, 60
-paint, 49
-paint, 70
-paint, 31
-pen, 48
-pencil, 88
-paint, 23
-pencil, 49
-balls, 80
-pencil, 83
-paint, 13
-paint, 66
-pen, 96
-pencil, 17
-pencil, 21
-
-2024 Total Items Sold: 5594
+Total Items Sold: 7735
 paint, 46
 paint, 9
 balls, 37
@@ -153,4 +111,46 @@ pencil, 48
 paint, 17
 pen, 77
 paint, 27
-
+balls, 87
+paint, 86
+pencil, 91
+pencil, 30
+pencil, 6
+pencil, 58
+pen, 58
+pencil, 73
+pen, 78
+pen, 65
+pen, 78
+paint, 97
+balls, 68
+paint, 23
+paint, 25
+pen, 2
+paint, 34
+paint, 43
+balls, 17
+pen, 35
+pen, 33
+pencil, 37
+pencil, 95
+balls, 41
+paint, 82
+pen, 60
+paint, 49
+paint, 70
+paint, 31
+pen, 48
+pencil, 88
+paint, 23
+pencil, 49
+balls, 80
+pencil, 83
+paint, 13
+paint, 66
+pen, 96
+pencil, 17
+pencil, 21
+balls, 2
+pencil, 1
+pencil, 2

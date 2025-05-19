@@ -17,17 +17,21 @@ public class InventoryCommands {
     public void start() {
         runMenuLoop();
     }
-
     private void runMenuLoop() {
         boolean running = true;
         while (running) {
-            System.out.println("Select an option:");
-            System.out.println("1. Add Items");
-            System.out.println("2. Remove Item");
-            System.out.println("3. Edit Item");
-            System.out.println("4. Display Inventory");
-            System.out.println("5. Save & Exit");
-            System.out.print("Your choice: ");
+            System.out.print(
+                    """
+                            ========================================
+                                     Inventory System
+                            ========================================
+                              1. Add Items
+                              2. Remove Item
+                              3. Edit Item
+                              4. Display Inventory
+                              5. Save amd Exit 
+                            ----------------------------------------
+                              Enter your choice: """);
 
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -35,19 +39,24 @@ public class InventoryCommands {
             switch (choice) {
                 case 1:
                     addItemsFlow();
+                    System.out.println("      ");
                     break;
                 case 2:
                     removeItemFlow();
+                    System.out.println("      ");
                     break;
                 case 3:
                     editItemFlow();
+                    System.out.println("      ");
                     break;
                 case 4:
                     inventory.displayInventory();
+                    System.out.println("      ");
                     break;
                 case 5:
                     saveAndExit();
                     running = false;
+                    System.out.println("      ");
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
@@ -88,13 +97,18 @@ public class InventoryCommands {
         scanner.nextLine();
         inventory.removeItem(removeName, removeQty);
     }
-
+    
     private void editItemFlow() {
-        System.out.println("Select an option to modify:");
-        System.out.println("1. Edit Item Price");
-        System.out.println("2. Edit Item Name");
-        System.out.println("3. Edit Item Quantity");
-        System.out.print("Your choice: ");
+        System.out.print(
+                    """    
+                            ========================================
+                                         Edit Items
+                            ========================================
+                              1. Edit Item Price
+                              2. Edit Item Name
+                              3. Edit Item Quantity
+                            ----------------------------------------
+                              Enter your choice: """);
 
         int choice = scanner.nextInt();
         scanner.nextLine();

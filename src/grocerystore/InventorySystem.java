@@ -25,7 +25,7 @@ public class InventorySystem {
             }
         }
         items.add(new GroceryItem(name, quantity, price));
-        System.out.println("New item added: " + name + " (" + quantity + " units at ₱" + String.format("%.2f", price) + ")");
+        System.out.println("New item added: " + name + " (" + quantity + " units at Php " + String.format("%.2f", price) + ")");
     }
 
     public void removeItem(String name, int quantity) {
@@ -53,7 +53,7 @@ public class InventorySystem {
                 }
                 else {
                     item.setPrice(price);
-                    System.out.println(name + "'s Item price has been modified to: " + price);
+                    System.out.println(name + "'s Item price has been modified to: Php " + price);
                 }
                 return;
             }
@@ -101,9 +101,9 @@ public class InventorySystem {
         String[][] inventory = inventoryLoader.getItems();
         Arrays.sort(inventory, Comparator.comparingInt(a -> Integer.parseInt(a[1])));
         System.out.println("-------------------------------");
-        System.out.printf("%-15s %-10s %-10s\n", "Item", "Quantity", "Price");
+        System.out.printf("%-15s %-10s %-10s\n", "Item", "Quantity",  "Price");
         for (String[] item : inventory) {
-            System.out.printf("%-15s %-10s %-10s\n", item[0], item[1], item[2]);
+            System.out.printf("%-15s %-10s %-10s\n", item[0], item[1], "Php " + item[2]);
         }
         System.out.println("-------------------------------");
     }

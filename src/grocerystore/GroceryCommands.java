@@ -24,20 +24,25 @@ public class GroceryCommands {
             switch (choice) {
                 case 1:
                     new InventoryCommands().start();
+                    System.out.println("      ");
                     break;
                 case 2:
                     new ReportCommands().start();
+                    System.out.println("      ");
                     break;
                 case 3:
                     new ReceiptCommands().start();
+                    System.out.println("      ");
                     break;
                 case 4:
                     new CustomerCommands().start();
+                    System.out.println("      ");
                     break;
                 case 5:
                     System.out.println("Exiting...");
                     scanner.close();
                     start = false;
+                    System.out.println("      ");
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");

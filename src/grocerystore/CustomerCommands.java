@@ -20,14 +20,19 @@ public class CustomerCommands {
     private void runMenuLoop() {
         boolean running = true;
         while (running) {
-            System.out.println("Select an option:");
-            System.out.println("1. Register Customer");
-            System.out.println("2. Remove Customers");
-            System.out.println("3. Edit Customer Name");
-            System.out.println("4. Edit Customer Status");
-            System.out.println("5. Display Customer");
-            System.out.println("6. Save & Exit");
-            System.out.print("Your choice: ");
+            System.out.print(
+                  """
+                          ========================================
+                                   Customer System
+                          ========================================
+                            1. Register Customer
+                            2. Remove Customer
+                            3. Edit Customer Name
+                            4. Edit Customer Status
+                            5. Display Customer
+                            6. Save and Exit
+                          ----------------------------------------
+                            Enter your choice: """);
 
             int choice = scanner.nextInt();
             scanner.nextLine();
