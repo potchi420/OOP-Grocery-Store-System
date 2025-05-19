@@ -2,4 +2,4 @@ balls 454 100.0
 paint 348 100.0
 pen 228 100.0
 pencil 105 300.0
-dogfood 10 100.0
+dogfood 9 50.0

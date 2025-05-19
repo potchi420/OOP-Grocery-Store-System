@@ -29,7 +29,7 @@ public class InventoryCommands {
                               2. Remove Item
                               3. Edit Item
                               4. Display Inventory
-                              5. Save amd Exit 
+                              5. Save and Exit 
                             ----------------------------------------
                               Enter your choice: """);
 

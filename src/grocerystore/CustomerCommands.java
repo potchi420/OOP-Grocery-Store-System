@@ -23,13 +23,13 @@ public class CustomerCommands {
             System.out.print(
                   """
                           ========================================
-                                   Customer System
+                                      Customer System
                           ========================================
                             1. Register Customer
                             2. Remove Customer
                             3. Edit Customer Name
                             4. Edit Customer Status
-                            5. Display Customer
+                            5. Display Customers
                             6. Save and Exit
                           ----------------------------------------
                             Enter your choice: """);

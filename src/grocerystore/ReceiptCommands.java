@@ -20,7 +20,7 @@ public class ReceiptCommands {
                 System.out.print(
                     """
                             ========================================
-                                     Shopping System
+                                        Shopping System
                             ========================================
                               1. Browse Available Items
                               2. Add Item to Cart
@@ -48,7 +48,7 @@ public class ReceiptCommands {
                         System.out.println("           ");
                         break;
                     case 2:
-                        System.out.println("Enter the item name to add to cart:");
+                        System.out.print("Enter the item name to add to cart:");
                         String itemName = scanner.nextLine().toLowerCase().trim();
                         receipt.addItemToCart(itemName, scanner);
                         System.out.println("           ");
@@ -58,7 +58,7 @@ public class ReceiptCommands {
                         System.out.println("           ");
                         break;  
                     case 4:
-                        System.out.println("Enter the item name to edit in cart:");
+                        System.out.print("Enter the item name to edit in cart:");
                         String editItemName = scanner.nextLine().toLowerCase().trim();
                         editCartItem(editItemName, scanner);
                         System.out.println("           ");
@@ -82,7 +82,7 @@ public class ReceiptCommands {
                             break;
                         }
                         System.out.println("Proceeding to checkout...");
-                        System.out.println("Enter name for Membership/PWD Discount. (Press ENTER to skip): ");
+                        System.out.print("Enter name for Membership/PWD Discount. (Press ENTER to skip): ");
                         String customerName = scanner.nextLine();
                         if (customerName.isEmpty()) {
                             System.out.println("No name entered. Proceeding without discount.");
@@ -129,7 +129,7 @@ public class ReceiptCommands {
 
         switch (choice) {
             case 1:
-                System.out.println("Enter new quantity for " + itemName + ": ");
+                System.out.print("Enter new quantity for " + itemName + ": ");
                 int newQuantity;
                 try {
                     newQuantity = scanner.nextInt();

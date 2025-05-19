@@ -31,9 +31,9 @@ public class ReportSystem {
         String[][] inventory = inventoryLoader.getItems();
         Arrays.sort(inventory, Comparator.comparingInt(a -> Integer.parseInt(a[1])));
         System.out.println("-------------------------------");
-        System.out.printf("%-15s %-10s %-10s\n", "Item", "Quantity", "Price");
+        System.out.printf("%-15s %-10s %-10s\n", "Item", "Quantity",  "Price");
         for (String[] item : inventory) {
-            System.out.printf("%-15s %-10s %-10s\n", item[0], item[1], item[2]);
+            System.out.printf("%-15s %-10s %-10s\n", item[0], item[1], "Php " + item[2]);
         }
         System.out.println("-------------------------------");
     }

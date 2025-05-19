@@ -18,7 +18,7 @@ public class ReportCommands {
             System.out.print(
                     """
                             ========================================
-                                     Report System
+                                        Report System
                             ========================================
                               1. Check Inventory
                               2. Sales Report
@@ -63,14 +63,14 @@ public class ReportCommands {
         System.out.print(
                     """
                             ========================================
-                                     Sales Report 
+                                         Sales Report 
                             ========================================
                               1. Total Daily Sales
                               2. Total Weekly Sales
                               3. Total Monthly Sales
                               4. Total Yearly Sales
                               5. Total Sales
-                              6. Exir
+                              6. Exit
                             ----------------------------------------
                               Enter your choice: """);
 
@@ -117,14 +117,14 @@ public class ReportCommands {
         System.out.print(
             """
                     ========================================
-                             Items Sold Report 
+                                Items Sold Report 
                     ========================================
                       1. Items Sold Daily 
                       2. Items Sold Weekly
                       3. Items Sold Monthly
                       4. Items Sold Yearly 
                       5. Total Sold Items
-                      6. Exir
+                      6. Exit
                     ----------------------------------------
                       Enter your choice: """);
 
