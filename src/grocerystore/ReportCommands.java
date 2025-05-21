@@ -165,18 +165,4 @@ public class ReportCommands {
                 System.out.println("        ");
         }
     }
-
-    // Placeholder methods for sales reports
-    public void getWeeklySales() {}
-    public void getMonthlySales() {}
-    public void getYearlySales() {}
-    public void getOverallSales() {}
-
-    // Placeholder methods for item sold reports
-    public void getDailyItemSold() {}
-    public void getWeeklyItemSold() {}
-    public void getMonthlyItemSold() {} 
-    public void getYearlyItemSold() {}
-    public void getOverallItemSold() {}
-
 }
