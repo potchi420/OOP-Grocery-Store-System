@@ -1,9 +1,5 @@
 package grocerystore;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.WeekFields;
@@ -60,34 +56,35 @@ public class ReportSystem {
         List<String> keys = new ArrayList<>(groupedSales.keySet());
         if (type != PeriodType.OVERALL) Collections.sort(keys, Collections.reverseOrder());
 
-        try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
-            writer.println(reportTitle + ":\n");
-            if (type == PeriodType.OVERALL) {
+        FileWriterSystem fileWriterSystem = new FileWriterSystem();
+        StringBuilder reportContent = new StringBuilder();
+        reportContent.append(reportTitle).append(":\n");
+
+        if (type == PeriodType.OVERALL) {
+            double total = 0;
+            for (String[] sale : groupedSales.getOrDefault("ALL", Collections.emptyList())) {
+                try { total += Double.parseDouble(sale[1]); } catch (NumberFormatException ignored) {}
+            }
+            reportContent.append(String.format("Total Sales: %.2f\n", total));
+            for (String[] sale : groupedSales.getOrDefault("ALL", Collections.emptyList())) {
+                reportContent.append(String.format("%s, %s\n", sale[0], sale[1]));
+            }
+        } else {
+            for (String key : keys) {
                 double total = 0;
-                for (String[] sale : groupedSales.getOrDefault("ALL", Collections.emptyList())) {
+                for (String[] sale : groupedSales.get(key)) {
                     try { total += Double.parseDouble(sale[1]); } catch (NumberFormatException ignored) {}
                 }
-                writer.printf("Total Sales: %.2f\n", total);
-                for (String[] sale : groupedSales.getOrDefault("ALL", Collections.emptyList())) {
-                    writer.printf("%s, %s\n", sale[0], sale[1]);
+                reportContent.append(String.format("%s Total Sales: %.2f\n", key, total));
+                for (String[] sale : groupedSales.get(key)) {
+                    reportContent.append(String.format("%s, %s\n", sale[0], sale[1]));
                 }
-            } else {
-                for (String key : keys) {
-                    double total = 0;
-                    for (String[] sale : groupedSales.get(key)) {
-                        try { total += Double.parseDouble(sale[1]); } catch (NumberFormatException ignored) {}
-                    }
-                    writer.printf("%s Total Sales: %.2f\n", key, total);
-                    for (String[] sale : groupedSales.get(key)) {
-                        writer.printf("%s, %s\n", sale[0], sale[1]);
-                    }
-                    writer.println();
-                }
+                reportContent.append("\n");
             }
-            System.out.println(reportTitle + " written to " + filename);
-        } catch (IOException e) {
-            System.err.println("Error writing to " + filename + ": " + e.getMessage());
         }
+
+        fileWriterSystem.writeToReportingFiles(filename, reportContent.toString());
+        System.out.println(reportTitle + " written to " + filename);
     }
 
     // Helper to get grouping key based on period type
@@ -146,34 +143,35 @@ public class ReportSystem {
         List<String> keys = new ArrayList<>(groupedItems.keySet());
         if (type != PeriodType.OVERALL) Collections.sort(keys, Collections.reverseOrder());
 
-        try (PrintWriter writer = new PrintWriter(new FileWriter(itemReportFile))) {
-            writer.println(reportTitle + ":\n");
-            if (type == PeriodType.OVERALL) {
+        FileWriterSystem fileWriterSystem = new FileWriterSystem();
+        StringBuilder reportContent = new StringBuilder();
+        reportContent.append(reportTitle).append(":\n");
+
+        if (type == PeriodType.OVERALL) {
+            int total = 0;
+            for (String[] item : groupedItems.getOrDefault("ALL", Collections.emptyList())) {
+                try { total += Integer.parseInt(item[1]); } catch (NumberFormatException ignored) {}
+            }
+            reportContent.append(String.format("Total Items Sold: %d\n", total));
+            for (String[] item : groupedItems.getOrDefault("ALL", Collections.emptyList())) {
+                reportContent.append(String.format("%s, %s\n", item[0], item[1]));
+            }
+        } else {
+            for (String key : keys) {
                 int total = 0;
-                for (String[] item : groupedItems.getOrDefault("ALL", Collections.emptyList())) {
+                for (String[] item : groupedItems.get(key)) {
                     try { total += Integer.parseInt(item[1]); } catch (NumberFormatException ignored) {}
                 }
-                writer.printf("Total Items Sold: %d\n", total);
-                for (String[] item : groupedItems.getOrDefault("ALL", Collections.emptyList())) {
-                    writer.printf("%s, %s\n", item[0], item[1]);
+                reportContent.append(String.format("%s Total Items Sold: %d\n", key, total));
+                for (String[] item : groupedItems.get(key)) {
+                    reportContent.append(String.format("%s, %s\n", item[0], item[1]));
                 }
-            } else {
-                for (String key : keys) {
-                    int total = 0;
-                    for (String[] item : groupedItems.get(key)) {
-                        try { total += Integer.parseInt(item[1]); } catch (NumberFormatException ignored) {}
-                    }
-                    writer.printf("%s Total Items Sold: %d\n", key, total);
-                    for (String[] item : groupedItems.get(key)) {
-                        writer.printf("%s, %s\n", item[0], item[1]);
-                    }
-                    writer.println();
-                }
+                reportContent.append("\n");
             }
-            System.out.println(reportTitle + " written to " + itemReportFile);
-        } catch (IOException e) {
-            System.err.println("Error writing to " + itemReportFile + ": " + e.getMessage());
         }
+
+        fileWriterSystem.writeToReportingFiles(itemReportFile, reportContent.toString());
+        System.out.println(reportTitle + " written to " + itemReportFile);
     }
 
     // Public methods for each item sold report type
